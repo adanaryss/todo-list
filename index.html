@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BT21 Jikook To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Canvas para partículas de fundo -->
+  <canvas id="background"></canvas>
+
+  <div class="container">
+    <header>
+      <img src="cooky-chimmy.png" alt="Cooky and Chimmy" class="characters" />
+    </header>
+
+    <form id="todoForm">
+      <input type="text" id="todoInput" placeholder="Add a task..." autocomplete="off" required />
+      <button type="submit">Add</button>
+    </form>
+
+    <ul id="todoList"></ul>
+
+    <p id="message" class="message"></p>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="particles.js"></script>
+</body>
+</html>

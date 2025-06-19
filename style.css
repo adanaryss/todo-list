@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #783c3c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden; /* para evitar scroll por causa do canvas */
+}
+
+/* Canvas do fundo */
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(135deg, #ffdee9 0%, #fff1b0 100%);
+}
+
+.container {
+  background: #fff8f0;
+  width: 480px;
+  border-radius: 30px;
+  box-shadow:
+    0 10px 25px rgba(255, 193, 7, 0.3),
+    0 4px 8px rgba(255, 193, 7, 0.2);
+  padding: 3rem 3.5rem;
+  text-align: center;
+  position: relative;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+.characters {
+  width: 160px;
+  user-select: none;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 4px rgba(255, 193, 7, 0.3));
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 0.9rem 1.2rem;
+  border-radius: 25px;
+  border: 2px solid #ffb300;
+  font-size: 1.1rem;
+  color: #b35435;
+  background: #fff6e5;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #f9a825;
+  outline: none;
+  background: #fff9e3;
+}
+
+button {
+  background-color: #fbc02d;
+  border: none;
+  color: #7a3f20;
+  padding: 0 1.8rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #f9a825;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  max-height: 280px;
+  overflow-y: auto;
+  border-top: 2px solid #fbc02d;
+  border-radius: 0 0 25px 25px;
+}
+
+li {
+  background: #ffe082;
+  border-radius: 20px;
+  padding: 0.8rem 1.2rem;
+  margin: 0.8rem 0;
+  font-size: 1.15rem;
+  color: #7a3f20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 0 7px #fbc02daa;
+  transition: background-color 0.3s ease;
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: #b3772a;
+  background: #ffe57f;
+}
+
+li:hover {
+  background-color: #fff176;
+}
+
+li button {
+  background: transparent;
+  border: none;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #b3772a;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.message {
+  margin-top: 1.2rem;
+  font-weight: 600;
+  color: #b3772a;
+  min-height: 24px;
+  font-style: italic;
+}
